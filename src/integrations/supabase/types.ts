@@ -14,7 +14,141 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      applications: {
+        Row: {
+          applied_at: string
+          company: string
+          created_at: string
+          id: string
+          link: string | null
+          location: string | null
+          notes: string | null
+          role: string
+          status: string
+          user_id: string
+        }
+        Insert: {
+          applied_at?: string
+          company: string
+          created_at?: string
+          id?: string
+          link?: string | null
+          location?: string | null
+          notes?: string | null
+          role: string
+          status?: string
+          user_id: string
+        }
+        Update: {
+          applied_at?: string
+          company?: string
+          created_at?: string
+          id?: string
+          link?: string | null
+          location?: string | null
+          notes?: string | null
+          role?: string
+          status?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      cover_letters: {
+        Row: {
+          body: string
+          company: string | null
+          created_at: string
+          id: string
+          role: string | null
+          title: string
+          tone: string | null
+          user_id: string
+        }
+        Insert: {
+          body?: string
+          company?: string | null
+          created_at?: string
+          id?: string
+          role?: string | null
+          title?: string
+          tone?: string | null
+          user_id: string
+        }
+        Update: {
+          body?: string
+          company?: string | null
+          created_at?: string
+          id?: string
+          role?: string | null
+          title?: string
+          tone?: string | null
+          user_id?: string
+        }
+        Relationships: []
+      }
+      profiles: {
+        Row: {
+          avatar_url: string | null
+          created_at: string
+          full_name: string | null
+          headline: string | null
+          id: string
+          updated_at: string
+        }
+        Insert: {
+          avatar_url?: string | null
+          created_at?: string
+          full_name?: string | null
+          headline?: string | null
+          id: string
+          updated_at?: string
+        }
+        Update: {
+          avatar_url?: string | null
+          created_at?: string
+          full_name?: string | null
+          headline?: string | null
+          id?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      resumes: {
+        Row: {
+          accent_color: string
+          ats_score: number
+          content: Json
+          created_at: string
+          id: string
+          template: string
+          title: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          accent_color?: string
+          ats_score?: number
+          content?: Json
+          created_at?: string
+          id?: string
+          template?: string
+          title?: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          accent_color?: string
+          ats_score?: number
+          content?: Json
+          created_at?: string
+          id?: string
+          template?: string
+          title?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
